@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>おかげさまで農園ゆーず｜不登校・学校に行きづらい小学生の居場所（茨城県古河市）</title>
+  <meta name="description" content="茨城県古河市にある、不登校や学校に行きづらさを感じている小学生のための暮らしの居場所。土にふれ、ごはんを食べ、安心して過ごせる場所です。1日500円。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+
+/* ─────────────────────────────────────────
+   RESET & TOKEN
+───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --c-white:       #fefcf8;
+  --c-cream:       #f6f1e7;
+  --c-ecru:        #ece6d4;
+  --c-beige:       #dfd6be;
+  --c-beige-mid:   #c8bc9e;
+  --c-green-mist:  #d4e2c4;
+  --c-green-soft:  #a8c490;
+  --c-green:       #6a9a56;
+  --c-green-deep:  #4d7a3e;
+  --c-brown-light: #c4a882;
+  --c-brown:       #8a6648;
+  --c-brown-deep:  #4e3220;
+  --c-text:        #3a2c1e;
+  --c-text-mid:    #5e4e3a;
+  --c-text-soft:   #8a7a66;
+  --c-shadow:      rgba(60,40,20,.10);
+
+  --r-sm: 12px;
+  --r-md: 20px;
+  --r-lg: 32px;
+
+  --space-section: 88px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  color: var(--c-text);
+  background: var(--c-cream);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4 { font-family: 'Noto Serif JP', serif; font-weight: 400; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ─────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────── */
+.wrap  { max-width: 860px;  margin: 0 auto; padding: 0 28px; }
+.wrap--narrow { max-width: 680px; margin: 0 auto; padding: 0 28px; }
+
+.section { padding: var(--space-section) 0; }
+.section--white  { background: var(--c-white); }
+.section--cream  { background: var(--c-cream); }
+.section--ecru   { background: var(--c-ecru); }
+.section--green  { background: var(--c-green-mist); }
+.section--brown  { background: var(--c-brown-deep); color: var(--c-cream); }
+
+/* ─────────────────────────────────────────
+   SECTION HEADING
+───────────────────────────────────────── */
+.sh {
+  margin-bottom: 48px;
+}
+.sh__label {
+  display: inline-block;
+  font-size: .68rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--c-green);
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.sh__label--light { color: var(--c-green-soft); }
+.sh__title {
+  font-size: clamp(1.35rem, 4vw, 1.9rem);
+  color: var(--c-brown-deep);
+  line-height: 1.55;
+}
+.sh__title--light { color: var(--c-ecru); }
+.sh__title em {
+  font-style: normal;
+  border-bottom: 2px solid var(--c-green-mist);
+  padding-bottom: 2px;
+}
+.sh__lead {
+  margin-top: 14px;
+  font-size: .92rem;
+  color: var(--c-text-soft);
+  line-height: 1.9;
+}
+
+/* ─────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 15px 32px;
+  font-size: .92rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  letter-spacing: .05em;
+  cursor: pointer;
+  transition: background .2s, color .2s, transform .15s;
+  border: 2px solid transparent;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn--primary {
+  background: var(--c-green);
+  color: var(--c-white);
+  border-color: var(--c-green);
+}
+.btn--primary:hover { background: var(--c-green-deep); border-color: var(--c-green-deep); }
+
+.btn--outline {
+  background: transparent;
+  color: var(--c-green);
+  border-color: var(--c-green);
+}
+.btn--outline:hover { background: var(--c-green-mist); }
+
+.btn--tel {
+  background: var(--c-brown);
+  color: var(--c-white);
+  border-color: var(--c-brown);
+}
+.btn--tel:hover { background: var(--c-brown-deep); border-color: var(--c-brown-deep); }
+
+.btn--note {
+  background: var(--c-ecru);
+  color: var(--c-brown-deep);
+  border-color: var(--c-beige-mid);
+}
+.btn--note:hover { background: var(--c-beige); }
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+/* ─────────────────────────────────────────
+   PLACEHOLDER IMAGE
+───────────────────────────────────────── */
+.ph {
+  width: 100%;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ph--hero   { height: 460px; border-radius: 0; }
+.ph--mid    { height: 260px; }
+.ph--sm     { height: 160px; }
+
+.ph__bg {
+  position: absolute;
+  inset: 0;
+}
+
+/* 各セクション用の色彩 */
+.ph--field { background: linear-gradient(145deg,#b8cca0 0%,#ccd8a8 30%,#d8c898 60%,#c4b07a 100%); }
+.ph--farm  { background: linear-gradient(155deg,#a8b890 0%,#b8c898 40%,#c8b87a 100%); }
+.ph--life  { background: linear-gradient(135deg,#c8d4b0 0%,#d8c898 50%,#c0a878 100%); }
+
+.ph::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 55% 45% at 35% 60%, rgba(255,255,255,.22) 0%, transparent 70%);
+  z-index: 1;
+}
+.ph__icon {
+  font-size: 4rem;
+  opacity: .18;
+  position: relative;
+  z-index: 2;
+  user-select: none;
+}
+.ph__note {
+  position: absolute;
+  bottom: 10px;
+  left: 14px;
+  font-size: .66rem;
+  color: rgba(255,255,255,.65);
+  letter-spacing: .08em;
+  z-index: 3;
+}
+
+/* ─────────────────────────────────────────
+   HEADER
+───────────────────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--c-white);
+  border-bottom: 1px solid var(--c-ecru);
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 28px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.header__logo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: .9rem;
+  color: var(--c-brown-deep);
+  line-height: 1.4;
+}
+.header__logo small {
+  display: block;
+  font-size: .7rem;
+  color: var(--c-text-soft);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+}
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header__tel-link {
+  font-size: .82rem;
+  color: var(--c-brown);
+  font-weight: 400;
+  white-space: nowrap;
+}
+.header__tel-link span {
+  display: block;
+  font-size: .62rem;
+  color: var(--c-text-soft);
+  font-weight: 300;
+}
+.header__btn {
+  font-size: .78rem;
+  padding: 8px 18px;
+}
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.hero { background: var(--c-ecru); }
+
+.hero .ph--hero {
+  background: linear-gradient(160deg, #b0c898 0%, #c4d4a0 18%, #d4c888 42%, #c8b87a 65%, #a8b880 100%);
+}
+.hero .ph--hero .ph__icon { font-size: 7rem; }
+
+.hero__body {
+  padding: 52px 28px 68px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.hero__tag {
+  display: inline-block;
+  background: var(--c-green-mist);
+  color: var(--c-green-deep);
+  border-radius: 999px;
+  font-size: .72rem;
+  letter-spacing: .15em;
+  padding: 5px 16px;
+  margin-bottom: 24px;
+}
+.hero__catch {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 5.5vw, 2.4rem);
+  color: var(--c-brown-deep);
+  line-height: 1.55;
+  margin-bottom: 28px;
+}
+.hero__catch em {
+  font-style: normal;
+  color: var(--c-green-deep);
+}
+.hero__poem {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(.92rem, 2.5vw, 1.08rem);
+  color: var(--c-brown);
+  line-height: 2.4;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  border-left: 3px solid var(--c-green-soft);
+}
+.hero__sub {
+  font-size: .88rem;
+  color: var(--c-text-soft);
+  margin-bottom: 36px;
+  margin-top: 24px;
+  line-height: 1.9;
+}
+.hero__tel-note {
+  font-size: .8rem;
+  color: var(--c-text-soft);
+  margin-top: 8px;
+}
+.hero__tel-note a {
+  color: var(--c-brown);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* ─────────────────────────────────────────
+   ABOUT
+───────────────────────────────────────── */
+.about__text {
+  font-size: .95rem;
+  color: var(--c-text-mid);
+  line-height: 2.1;
+}
+.about__text p { margin-bottom: 1.6em; }
+.about__text p:last-child { margin-bottom: 0; }
+.about__text strong { color: var(--c-brown-deep); font-weight: 400; }
+
+.about__img {
+  margin: 40px 0;
+}
+
+/* ─────────────────────────────────────────
+   VALUE (大切にしていること)
+───────────────────────────────────────── */
+.value__quote {
+  background: var(--c-white);
+  border-radius: var(--r-md);
+  padding: 36px 36px 36px 40px;
+  border-left: 4px solid var(--c-green-soft);
+  margin: 36px 0;
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1rem, 2.5vw, 1.18rem);
+  color: var(--c-brown-deep);
+  line-height: 1.9;
+  box-shadow: 0 2px 18px var(--c-shadow);
+}
+.value__text {
+  font-size: .93rem;
+  color: var(--c-text-mid);
+  line-height: 2.1;
+}
+.value__text p { margin-bottom: 1.4em; }
+.value__thinkers {
+  background: var(--c-white);
+  border-radius: var(--r-sm);
+  padding: 18px 20px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0 20px;
+  font-size: .82rem;
+  color: var(--c-text-soft);
+  border: 1px solid var(--c-beige);
+}
+.value__thinkers span { color: var(--c-green-deep); }
+
+/* ─────────────────────────────────────────
+   ACTIVITIES (できること)
+───────────────────────────────────────── */
+.act-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.act-item {
+  background: var(--c-white);
+  border: 1px solid var(--c-beige);
+  border-radius: var(--r-sm);
+  padding: 18px 14px;
+  text-align: center;
+  font-size: .88rem;
+  color: var(--c-text-mid);
+  line-height: 1.6;
+  transition: transform .15s, box-shadow .15s;
+}
+.act-item:hover { transform: translateY(-3px); box-shadow: 0 6px 20px var(--c-shadow); }
+.act-item .act-icon { font-size: 1.5rem; margin-bottom: 8px; display: block; }
+
+.act-note {
+  background: var(--c-white);
+  border-radius: var(--r-md);
+  padding: 28px 30px;
+  border-left: 3px solid var(--c-green-soft);
+  font-family: 'Noto Serif JP', serif;
+  font-size: .98rem;
+  color: var(--c-brown);
+  line-height: 1.9;
+}
+
+/* ─────────────────────────────────────────
+   TIMELINE (1日の流れ)
+───────────────────────────────────────── */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: var(--c-green-mist);
+  border-radius: 2px;
+}
+.tl-item {
+  position: relative;
+  padding: 0 0 36px 28px;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: var(--c-white);
+  border: 2px solid var(--c-green-soft);
+  border-radius: 50%;
+}
+.tl-time {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.05rem;
+  color: var(--c-green-deep);
+  margin-bottom: 4px;
+  letter-spacing: .06em;
+}
+.tl-body {
+  font-size: .9rem;
+  color: var(--c-text-mid);
+  line-height: 1.85;
+}
+.tl-note {
+  margin-top: 32px;
+  padding: 20px 22px;
+  background: var(--c-ecru);
+  border-radius: var(--r-sm);
+  font-size: .84rem;
+  color: var(--c-text-soft);
+  line-height: 1.9;
+  border: 1px solid var(--c-beige);
+}
+.tl-note p + p { margin-top: .5em; }
+
+/* ─────────────────────────────────────────
+   TARGET (対象)
+───────────────────────────────────────── */
+.target-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.target-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--c-white);
+  border-radius: var(--r-sm);
+  padding: 18px 20px;
+  border: 1px solid var(--c-beige);
+  font-size: .95rem;
+  color: var(--c-text-mid);
+}
+.target-item .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--c-green-soft);
+  flex-shrink: 0;
+}
+.target-note {
+  font-size: .82rem;
+  color: var(--c-text-soft);
+  padding-left: 4px;
+}
+
+/* ─────────────────────────────────────────
+   USAGE (ご利用について)
+───────────────────────────────────────── */
+.usage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+}
+.usage-card {
+  background: var(--c-white);
+  border-radius: var(--r-md);
+  padding: 26px 22px;
+  border: 1px solid var(--c-beige);
+}
+.usage-card__label {
+  font-size: .68rem;
+  letter-spacing: .18em;
+  color: var(--c-green-deep);
+  margin-bottom: 10px;
+  display: block;
+}
+.usage-card__value {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.08rem;
+  color: var(--c-brown-deep);
+  line-height: 1.55;
+}
+.usage-card__value small {
+  display: block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: .76rem;
+  color: var(--c-text-soft);
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+.address-box {
+  margin-top: 24px;
+  padding: 22px 24px;
+  background: var(--c-ecru);
+  border-radius: var(--r-sm);
+  font-size: .9rem;
+  color: var(--c-text-mid);
+  border: 1px solid var(--c-beige);
+  line-height: 1.85;
+}
+.address-box strong { color: var(--c-brown-deep); font-weight: 400; }
+
+/* ─────────────────────────────────────────
+   SCHOOL / TRANSPORT
+───────────────────────────────────────── */
+.info-box {
+  background: var(--c-white);
+  border-radius: var(--r-md);
+  padding: 32px 32px;
+  border: 1px solid var(--c-beige);
+  font-size: .92rem;
+  color: var(--c-text-mid);
+  line-height: 2;
+}
+.info-box + .info-box { margin-top: 20px; }
+.info-box__icon {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+.info-box__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.05rem;
+  color: var(--c-brown-deep);
+  margin-bottom: 12px;
+}
+
+/* ─────────────────────────────────────────
+   PARENT MESSAGE (保護者の方へ)
+───────────────────────────────────────── */
+.parent__inner {
+  position: relative;
+}
+.parent__quote {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+  color: var(--c-brown-deep);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  padding-left: 24px;
+  border-left: 4px solid var(--c-green-soft);
+}
+.parent__text {
+  font-size: .93rem;
+  color: var(--c-text-mid);
+  line-height: 2.2;
+}
+.parent__text p { margin-bottom: 1.4em; }
+.parent__text p:last-child { margin-bottom: 0; }
+.parent__emphasis {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.08rem;
+  color: var(--c-brown);
+  line-height: 2;
+  padding: 24px 28px;
+  background: var(--c-ecru);
+  border-radius: var(--r-sm);
+  margin: 24px 0;
+}
+
+/* ─────────────────────────────────────────
+   NOTE SECTION
+───────────────────────────────────────── */
+.note-section { background: var(--c-ecru); }
+.note-card {
+  background: var(--c-white);
+  border-radius: var(--r-md);
+  padding: 36px;
+  border: 1px solid var(--c-beige);
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.note-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+  letter-spacing: .05em;
+}
+.note-card__body { flex: 1; }
+.note-card__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.05rem;
+  color: var(--c-brown-deep);
+  margin-bottom: 8px;
+}
+.note-card__text {
+  font-size: .88rem;
+  color: var(--c-text-soft);
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+.note-card__url {
+  font-size: .78rem;
+  color: var(--c-text-soft);
+  word-break: break-all;
+  margin-top: 6px;
+}
+
+/* ─────────────────────────────────────────
+   CONTACT
+───────────────────────────────────────── */
+.contact { background: var(--c-brown-deep); }
+.contact .sh__label { color: var(--c-green-soft); }
+.contact .sh__title { color: var(--c-ecru); }
+.contact__lead {
+  font-size: .92rem;
+  color: var(--c-beige-mid);
+  line-height: 2;
+  margin-bottom: 40px;
+}
+.contact__box {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--r-lg);
+  padding: 44px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.contact__label {
+  font-size: .7rem;
+  letter-spacing: .2em;
+  color: var(--c-green-soft);
+  margin-bottom: 10px;
+}
+.contact__tel {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.8rem, 7vw, 2.6rem);
+  color: var(--c-white);
+  letter-spacing: .05em;
+  margin-bottom: 6px;
+}
+.contact__tel a { color: inherit; }
+.contact__tel-name {
+  font-size: .82rem;
+  color: var(--c-beige-mid);
+}
+
+.operator-box {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--r-sm);
+  padding: 22px 24px;
+  font-size: .86rem;
+  color: var(--c-beige-mid);
+  line-height: 1.85;
+}
+.operator-box strong { color: var(--c-ecru); font-weight: 400; }
+.operator-box .preparing {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: .74rem;
+  background: rgba(255,255,255,.1);
+  border-radius: 4px;
+  padding: 2px 8px;
+  color: rgba(255,255,255,.5);
+}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+footer {
+  background: #2e1e10;
+  padding: 36px 28px;
+  text-align: center;
+  color: var(--c-beige-mid);
+  font-size: .76rem;
+  line-height: 2;
+}
+footer strong {
+  display: block;
+  font-family: 'Noto Serif JP', serif;
+  font-size: .9rem;
+  font-weight: 400;
+  color: var(--c-ecru);
+  margin-bottom: 6px;
+}
+footer a { color: var(--c-green-soft); }
+
+/* ─────────────────────────────────────────
+   TO TOP
+───────────────────────────────────────── */
+.totop {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--c-green);
+  color: var(--c-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  z-index: 99;
+  transition: background .2s;
+}
+.totop:hover { background: var(--c-brown); }
+
+/* ─────────────────────────────────────────
+   CONTACT FORM
+───────────────────────────────────────── */
+.form-section { background: var(--c-white); }
+
+.form-lead {
+  font-size: .92rem;
+  color: var(--c-text-mid);
+  line-height: 2;
+  margin-bottom: 40px;
+  padding: 24px 26px;
+  background: var(--c-ecru);
+  border-radius: var(--r-sm);
+  border-left: 3px solid var(--c-green-soft);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: .85rem;
+  color: var(--c-text-mid);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-required {
+  display: inline-block;
+  background: var(--c-green);
+  color: var(--c-white);
+  font-size: .66rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: .05em;
+}
+
+.form-optional {
+  display: inline-block;
+  background: var(--c-beige);
+  color: var(--c-text-soft);
+  font-size: .66rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: .05em;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 16px 18px;
+  font-size: .95rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  color: var(--c-text);
+  background: var(--c-cream);
+  border: 1.5px solid var(--c-beige);
+  border-radius: var(--r-sm);
+  outline: none;
+  transition: border-color .2s, background .2s;
+  -webkit-appearance: none;
+  appearance: none;
+  line-height: 1.6;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--c-green-soft);
+  background: var(--c-white);
+}
+
+.form-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-select-wrap {
+  position: relative;
+}
+.form-select-wrap::after {
+  content: '▾';
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--c-text-soft);
+  pointer-events: none;
+  font-size: .9rem;
+}
+
+.form-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.form-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--c-cream);
+  border: 1.5px solid var(--c-beige);
+  border-radius: 999px;
+  font-size: .88rem;
+  color: var(--c-text-mid);
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+
+.form-radio-label input[type="radio"] {
+  accent-color: var(--c-green);
+  width: 16px;
+  height: 16px;
+}
+
+.form-radio-label:has(input:checked) {
+  border-color: var(--c-green-soft);
+  background: var(--c-green-mist);
+  color: var(--c-green-deep);
+}
+
+.form-divider {
+  border: none;
+  border-top: 1px solid var(--c-ecru);
+  margin: 4px 0;
+}
+
+.form-submit-wrap {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.btn--submit {
+  background: var(--c-green);
+  color: var(--c-white);
+  border: 2px solid var(--c-green);
+  border-radius: 999px;
+  padding: 18px 48px;
+  font-size: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  width: 100%;
+  max-width: 360px;
+}
+.btn--submit:hover {
+  background: var(--c-green-deep);
+  border-color: var(--c-green-deep);
+  transform: translateY(-2px);
+}
+
+/* ダーク背景上のフォーム調整 */
+.contact-form--dark .form-input,
+.contact-form--dark .form-select,
+.contact-form--dark .form-textarea {
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.20);
+  color: var(--c-cream);
+}
+.contact-form--dark .form-input::placeholder,
+.contact-form--dark .form-textarea::placeholder {
+  color: rgba(255,255,255,.38);
+}
+.contact-form--dark .form-input:focus,
+.contact-form--dark .form-select:focus,
+.contact-form--dark .form-textarea:focus {
+  background: rgba(255,255,255,.16);
+  border-color: var(--c-green-soft);
+}
+.contact-form--dark .form-select option {
+  background: var(--c-brown-deep);
+  color: var(--c-cream);
+}
+.contact-form--dark .form-select-wrap::after {
+  color: rgba(255,255,255,.5);
+}
+.contact-form--dark .form-radio-label {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.18);
+  color: var(--c-beige-mid);
+}
+.contact-form--dark .form-radio-label:has(input:checked) {
+  background: rgba(168,196,144,.25);
+  border-color: var(--c-green-soft);
+  color: var(--c-green-soft);
+}
+
+.form-label--light { color: var(--c-beige-mid); }
+
+.form-divider--dark { border-color: rgba(255,255,255,.12); }
+
+/* 補助導線 */
+.contact-sub {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--r-md);
+  padding: 28px 30px;
+  margin-top: 40px;
+}
+.contact-sub__card { flex: 1; min-width: 160px; }
+.contact-sub__label {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  color: var(--c-green-soft);
+  margin-bottom: 6px;
+}
+.contact-sub__tel {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.5rem;
+  color: var(--c-white);
+  letter-spacing: .04em;
+}
+.contact-sub__tel a { color: inherit; }
+.contact-sub__name {
+  font-size: .8rem;
+  color: var(--c-beige-mid);
+  margin-top: 4px;
+}
+.contact-sub__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* 送信完了メッセージ */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 52px 32px;
+  background: var(--c-green-mist);
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-green-soft);
+}
+.form-success__icon {
+  font-size: 2.6rem;
+  margin-bottom: 18px;
+}
+.form-success__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.2rem;
+  color: var(--c-green-deep);
+  margin-bottom: 12px;
+}
+.form-success__body {
+  font-size: .9rem;
+  color: var(--c-text-mid);
+  line-height: 2;
+}
+
+/* ─────────────────────────────────────────
+   ACCESS
+───────────────────────────────────────── */
+.access-address {
+  background: var(--c-white);
+  border-radius: var(--r-sm);
+  padding: 24px 26px;
+  border: 1px solid var(--c-beige);
+  margin-bottom: 24px;
+}
+.access-address__label {
+  font-size: .7rem;
+  letter-spacing: .18em;
+  color: var(--c-green-deep);
+  margin-bottom: 8px;
+}
+.access-address__value {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.02rem;
+  color: var(--c-brown-deep);
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+.access-address__note {
+  font-size: .82rem;
+  color: var(--c-text-soft);
+}
+.access-map {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-beige);
+  box-shadow: 0 2px 16px var(--c-shadow);
+  line-height: 0; /* iframeの下余白を消す */
+}
+.access-map iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  display: block;
+}
+
+/* ─────────────────────────────────────────
+   DIVIDER
+───────────────────────────────────────── */
+.divider-leaf {
+  text-align: center;
+  font-size: .9rem;
+  letter-spacing: .8em;
+  color: var(--c-green-soft);
+  padding: 0 0 0 .8em;
+  user-select: none;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 640px) {
+  :root { --space-section: 60px; }
+
+  .header__btn { display: none; }
+  .header__inner { padding: 12px 20px; }
+
+  .wrap, .wrap--narrow { padding: 0 20px; }
+
+  .ph--hero  { height: 260px; }
+  .ph--mid   { height: 190px; }
+
+  .hero__body { padding: 40px 20px 52px; }
+
+  .note-card { flex-direction: column; gap: 16px; }
+
+  .contact__box { padding: 30px 22px; }
+
+  .value__quote { padding: 24px 20px 24px 24px; }
+
+  .usage-grid { grid-template-columns: 1fr 1fr; }
+
+  .act-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 400px) {
+  .cta-group { flex-direction: column; }
+  .cta-group .btn { width: 100%; justify-content: center; }
+  .usage-grid { grid-template-columns: 1fr; }
+  .act-list { grid-template-columns: 1fr 1fr; }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      おかげさまで農園ゆーず
+      <small>茨城県古河市 ／ 不登校・学校に行きづらい小学生の居場所</small>
+    </div>
+    <div class="header__actions">
+      <a href="tel:09055774272" class="header__tel-link">
+        <span>お問い合わせ</span>
+        090-5577-4272
+      </a>
+      <a href="#form" class="btn btn--primary header__btn">見学・相談する</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+
+  <!-- 仮の画像エリア：農園・やわらかい光 -->
+  <div class="ph ph--hero ph--field" role="img" aria-label="農園の風景（画像準備中）">
+    <div class="ph__bg"></div>
+    <span class="ph__icon">🌾</span>
+    <span class="ph__note">※ 写真は準備中です</span>
+  </div>
+
+  <div class="hero__body">
+    <span class="hero__tag">茨城県古河市 ／ 暮らしの居場所</span>
+
+    <h1 class="hero__catch">
+      このままの自分で、<br>
+      <em>安心して過ごせる場所。</em>
+    </h1>
+
+    <div class="hero__poem">
+      土に触れること。<br>
+      太陽を浴びること。<br>
+      ごはんを食べること。<br>
+      ぼーっとすること。<br>
+      誰かと笑うこと。
+    </div>
+
+    <p class="hero__sub">
+      おかげさまで農園ゆーずは、不登校や学校に行きづらさを感じている<br>
+      小学生たちが、安心して過ごせる「暮らしの居場所」です。
+    </p>
+
+    <div class="cta-group">
+      <a href="#form" class="btn btn--primary">見学・相談する</a>
+      <a href="tel:09055774272" class="btn btn--tel">📞 電話で問い合わせる</a>
+      <a href="https://note.com/alive_gerbil9037/n/n7593c25e3b86" target="_blank" rel="noopener" class="btn btn--note">noteを見る</a>
+    </div>
+
+    <p class="hero__tel-note">
+      お電話は：<a href="tel:09055774272">090-5577-4272</a>　※お気軽にどうぞ
+    </p>
+  </div>
+</section>
+
+
+<!-- ==================== ABOUT ==================== -->
+<section class="section section--white" id="about">
+  <div class="wrap--narrow">
+    <div class="sh">
+      <span class="sh__label">About</span>
+      <h2 class="sh__title"><em>私たちについて</em></h2>
+    </div>
+
+    <!-- 仮の画像エリア：古民家・やわらかい光 -->
+    <div class="about__img">
+      <div class="ph ph--mid ph--life" role="img" aria-label="ゆーずの場所（画像準備中）">
+        <div class="ph__bg"></div>
+        <span class="ph__icon">🏡</span>
+        <span class="ph__note">※ 写真は準備中です</span>
+      </div>
+    </div>
+
+    <div class="about__text">
+      <p>
+        不登校児童の休憩所「HO-HO-HO」が、小学生たちが安心して過ごせる場所「おかげさまで農園ゆーず」と、中高生向けの勉強や生涯学習へ特化した「ホットスポット」となり始まりました。
+      </p>
+      <p>
+        HO-HO-HOでは、<strong>「自分はこのままでいいんだ」と思える安心安全な基地づくり</strong>を大切にしてきました。
+      </p>
+      <p>
+        そして今、それぞれの場所が、「挑戦」や「命」について、より深く考えられる場所へ変わっていきます。
+      </p>
+      <p>
+        その中で「ゆーず」は、小学生たちが、<strong>土や自然、暮らしや文化に触れながら、安心して過ごせる場所</strong>として在ります。
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== VALUE ==================== -->
+<section class="section section--green" id="value">
+  <div class="wrap--narrow">
+    <div class="sh">
+      <span class="sh__label">Our Values</span>
+      <h2 class="sh__title"><em>私たちが大切にしていること</em></h2>
+    </div>
+
+    <div class="value__text">
+      <p>
+        私たちは、子どもは「育てるもの」ではなく、<strong style="color:var(--c-brown-deep)">「育っていくもの」</strong>だと考えています。
+      </p>
+    </div>
+
+    <div class="value__quote">
+      大人の役割は「教え込むこと」ではなく、<br>
+      「環境を整えること」。
+    </div>
+
+    <div class="value__thinkers">
+      <span>参考：</span>
+      マリア・モンテッソーリ / ジャン・ピアジェの考え方に共感しています
+    </div>
+
+    <div class="value__text">
+      <p>
+        親や学校の先生、そして地域の大人たちにできることの一つは、
+      </p>
+      <p>
+        「<strong style="color:var(--c-brown-deep)">選択できる環境を増やすこと</strong>」
+      </p>
+      <p>
+        なのではないかと思っています。
+      </p>
+      <p>
+        おかげさまで農園ゆーずは、その選択肢の一つとして生まれました。
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== ACTIVITIES ==================== -->
+<section class="section section--cream" id="activities">
+  <div class="wrap">
+    <div class="sh">
+      <span class="sh__label">Activities</span>
+      <h2 class="sh__title"><em>ゆーずでできること</em></h2>
+    </div>
+
+    <div class="act-list">
+      <div class="act-item"><span class="act-icon">🌱</span>土や自然に触れる</div>
+      <div class="act-item"><span class="act-icon">🚜</span>農作業をする</div>
+      <div class="act-item"><span class="act-icon">🥕</span>野菜を育てる</div>
+      <div class="act-item"><span class="act-icon">🍽️</span>育てた野菜を食べる</div>
+      <div class="act-item"><span class="act-icon">🍚</span>ごはんを一緒に食べる</div>
+      <div class="act-item"><span class="act-icon">🎈</span>自由に遊ぶ</div>
+      <div class="act-item"><span class="act-icon">☁️</span>休む</div>
+      <div class="act-item"><span class="act-icon">💬</span>話す</div>
+      <div class="act-item"><span class="act-icon">🌤️</span>ぼーっとする</div>
+      <div class="act-item"><span class="act-icon">🍂</span>季節を感じる</div>
+      <div class="act-item"><span class="act-icon">🏠</span>暮らしを感じる</div>
+    </div>
+
+    <div class="act-note">
+      「何かを頑張る場所」というより、<br>
+      <strong>「安心して過ごせる場所」</strong>でありたいと思っています。
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== TIMELINE ==================== -->
+<section class="section section--white" id="schedule">
+  <div class="wrap--narrow">
+    <div class="sh">
+      <span class="sh__label">Daily Schedule</span>
+      <h2 class="sh__title"><em>1日の流れ</em></h2>
+    </div>
+
+    <!-- 仮の画像エリア：農園の朝 -->
+    <div style="margin-bottom: 44px;">
+      <div class="ph ph--sm ph--farm" role="img" aria-label="農園の朝の様子（画像準備中）">
+        <div class="ph__bg"></div>
+        <span class="ph__icon" style="font-size:2.5rem">🌄</span>
+        <span class="ph__note">※ 写真は準備中です</span>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <p class="tl-time">10:00</p>
+        <p class="tl-body">ゆっくり集合</p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-time">10:15</p>
+        <p class="tl-body">
+          畑・自由活動・散歩・料理・穴掘り・水遊びなど<br>
+          <span style="font-size:.84rem; color:var(--c-text-soft)">その日の気分や体調に合わせて、自由に過ごします</span>
+        </p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-time">11:30</p>
+        <p class="tl-body">昼食準備・昼食</p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-time">13:00</p>
+        <p class="tl-body">自由時間</p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-time">14:00</p>
+        <p class="tl-body">片付け・帰宅</p>
+      </div>
+    </div>
+
+    <div class="tl-note">
+      <p>※ その日の体調や気持ちを大切にしています。</p>
+      <p>※ 無理に活動へ参加する必要はありません。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== TARGET ==================== -->
+<section class="section section--ecru" id="target">
+  <div class="wrap--narrow">
+    <div class="sh">
+      <span class="sh__label">For Whom</span>
+      <h2 class="sh__title"><em>対象のお子さん</em></h2>
+    </div>
+
+    <div class="target-list">
+      <div class="target-item">
+        <span class="dot"></span>
+        小学校1年生〜6年生
+      </div>
+      <div class="target-item">
+        <span class="dot"></span>
+        不登校のお子さん
+      </div>
+      <div class="target-item">
+        <span class="dot"></span>
+        学校に行きづらさを感じているお子さん
+      </div>
+    </div>
+    <p class="target-note">※ 中学生以上はご相談ください。</p>
+  </div>
+</section>
+
+
+<!-- ==================== USAGE ==================== -->
+<section class="section section--white" id="usage">
+  <div class="wrap">
+    <div class="sh">
+      <span class="sh__label">Information</span>
+      <h2 class="sh__title"><em>ご利用について</em></h2>
+    </div>
+
+    <div class="usage-grid">
+      <div class="usage-card">
+        <span class="usage-card__label">利用料金</span>
+        <p class="usage-card__value">
+          1日 500円
+          <small>食事代込み</small>
+        </p>
+      </div>
+      <div class="usage-card">
+        <span class="usage-card__label">定員</span>
+        <p class="usage-card__value">
+          1日 10名
+        </p>
+      </div>
+      <div class="usage-card">
+        <span class="usage-card__label">活動時間</span>
+        <p class="usage-card__value">
+          10:00 〜 14:00
+        </p>
+      </div>
+      <div class="usage-card">
+        <span class="usage-card__label">活動日時</span>
+        <p class="usage-card__value">
+          月・水・木・金曜日
+        </p>
+      </div>
+    </div>
+
+    <div class="address-box">
+      <strong>場所</strong><br>
+      〒306-0126<br>
+      茨城県古河市久能 925-1
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== ACCESS ==================== -->
+<section class="section section--ecru" id="access">
+  <div class="wrap--narrow">
+    <div class="sh">
+      <span class="sh__label">Access</span>
+      <h2 class="sh__title"><em>アクセス</em></h2>
+    </div>
+
+    <div class="access-address">
+      <p class="access-address__label">活動場所</p>
+      <p class="access-address__value">
+        〒306-0126<br>
+        茨城県古河市久能 925-1
+      </p>
+      <p class="access-address__note">見学やご相談の際は、事前にお問い合わせください。</p>
+    </div>
+
+    <div class="access-map">
+      <iframe
+        src="https://www.google.com/maps?q=茨城県古河市久能925-1&output=embed"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="おかげさまで農園ゆーず アクセスマップ">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== SCHOOL / TRANSPORT ==================== -->
+<section class="section section--cream" id="support">
+  <div class="wrap--narrow">
+    <div class="sh">
+      <span class="sh__label">Support</span>
+      <h2 class="sh__title"><em>学校との連携・送迎について</em></h2>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box__icon">🏫</div>
+      <p class="info-box__title">学校との連携</p>
+      <p>ご希望があれば、学校長への働きかけや連携相談も行います。</p>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box__icon">🚗</div>
+      <p class="info-box__title">送迎について</p>
+      <p>基本的には送迎は行っておりません。ただし、状況によってご相談ください。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== PARENT MESSAGE ==================== -->
+<section class="section section--ecru" id="parents">
+  <div class="wrap--narrow">
+    <div class="sh">
+      <span class="sh__label">For Parents</span>
+      <h2 class="sh__title"><em>保護者の方へ</em></h2>
+    </div>
+
+    <div class="parent__quote">
+      「うちの子でも大丈夫でしょうか」
+    </div>
+
+    <div class="parent__text">
+      <p>
+        そんな不安を抱えながら、このページを見てくださっている方もいるかもしれません。
+      </p>
+      <p>
+        おかげさまで農園ゆーずは、「こういう子じゃないと来てはいけない」という場所ではありません。
+      </p>
+
+      <div class="parent__emphasis">
+        どんな子でも、<br>
+        「行ってみたい」と思ってくれたなら、<br>
+        来てくれたらうれしい。
+      </div>
+
+      <p>
+        そんな場所です。
+      </p>
+      <p>
+        そして、その気持ちに、<strong style="color:var(--c-brown-deep)">「ありがとう」</strong>と伝えたいと思っています。
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== NOTE ==================== -->
+<section class="section note-section" id="note">
+  <div class="wrap--narrow">
+    <div class="sh">
+      <span class="sh__label">Note</span>
+      <h2 class="sh__title"><em>noteで発信しています</em></h2>
+    </div>
+
+    <div class="note-card">
+      <div class="note-card__icon">note</div>
+      <div class="note-card__body">
+        <p class="note-card__title">スタッフの想いや日々の活動</p>
+        <p class="note-card__text">
+          ゆーずのスタッフが、日々感じていること・活動の様子・子どもたちへの想いをnoteで綴っています。
+          ぜひ読んでみてください。
+        </p>
+        <a href="https://note.com/alive_gerbil9037/n/n7593c25e3b86"
+           target="_blank" rel="noopener"
+           class="btn btn--note">noteを読む →</a>
+        <p class="note-card__url">
+          https://note.com/alive_gerbil9037/n/n7593c25e3b86
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== CONTACT ==================== -->
+<section class="section contact" id="contact">
+  <div class="wrap--narrow">
+
+    <div class="sh">
+      <span class="sh__label sh__label--light">Contact</span>
+      <h2 class="sh__title sh__title--light"><em style="border-color:rgba(255,255,255,.25); color:var(--c-ecru)">見学・お問い合わせ</em></h2>
+    </div>
+
+    <p class="contact__lead">
+      「まずは話だけ聞いてみたい」「見学だけでも」<br>
+      そんなご相談も、どうぞお気軽にご連絡ください。<br><br>
+      見学のご希望やご相談、ご利用に関するご質問などがありましたら、<br>
+      こちらのフォームからお問い合わせください。<br>
+      内容を確認のうえ、担当者よりご連絡いたします。
+    </p>
+
+    <!-- 送信完了メッセージ（送信後に表示） -->
+    <div class="form-success" id="formSuccess" role="alert">
+      <div class="form-success__icon">✉️</div>
+      <p class="form-success__title">お問い合わせありがとうございます。</p>
+      <p class="form-success__body">
+        内容を確認のうえ、担当者よりご連絡いたします。<br>
+        しばらくお待ちください。
+      </p>
+    </div>
+
+    <!--
+      【送信先の設定方法】
+      Formspree を使う場合 → action="https://formspree.io/f/YOUR_FORM_ID"  method="POST"
+      Netlify Forms を使う場合 → <form netlify name="contact" ...>
+      現時点では action="" のままにしています。
+    -->
+    <form
+      class="contact-form contact-form--dark"
+      id="contactForm"
+      action=""
+      method="POST"
+      novalidate>
+
+      <!-- ── 必須項目 ── -->
+      <div class="form-group">
+        <label class="form-label form-label--light" for="name">
+          保護者のお名前
+          <span class="form-required">必須</span>
+        </label>
+        <input
+          class="form-input"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="例：山田 花子"
+          autocomplete="name"
+          required />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label form-label--light" for="email">
+          メールアドレス
+          <span class="form-required">必須</span>
+        </label>
+        <input
+          class="form-input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="例：example@email.com"
+          autocomplete="email"
+          required />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label form-label--light" for="tel">
+          電話番号
+          <span class="form-required">必須</span>
+        </label>
+        <input
+          class="form-input"
+          type="tel"
+          id="tel"
+          name="tel"
+          placeholder="例：090-0000-0000"
+          autocomplete="tel"
+          required />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label form-label--light" for="message">
+          お問い合わせ内容
+          <span class="form-required">必須</span>
+        </label>
+        <textarea
+          class="form-textarea"
+          id="message"
+          name="message"
+          placeholder="ご質問やご相談内容をご記入ください。"
+          required></textarea>
+      </div>
+
+      <hr class="form-divider form-divider--dark" />
+
+      <!-- ── 任意項目 ── -->
+      <div class="form-group">
+        <label class="form-label form-label--light" for="grade">
+          お子さんの学年
+          <span class="form-optional">任意</span>
+        </label>
+        <div class="form-select-wrap">
+          <select class="form-select" id="grade" name="grade">
+            <option value="">選択してください</option>
+            <option value="小1">小学1年生</option>
+            <option value="小2">小学2年生</option>
+            <option value="小3">小学3年生</option>
+            <option value="小4">小学4年生</option>
+            <option value="小5">小学5年生</option>
+            <option value="小6">小学6年生</option>
+            <option value="中学生以上">中学生以上</option>
+            <option value="その他">その他・未定</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <p class="form-label form-label--light">
+          見学のご希望
+          <span class="form-optional">任意</span>
+        </p>
+        <div class="form-radio-group">
+          <label class="form-radio-label">
+            <input type="radio" name="visit" value="希望する" /> 希望する
+          </label>
+          <label class="form-radio-label">
+            <input type="radio" name="visit" value="まだ迷っている" /> まだ迷っている
+          </label>
+          <label class="form-radio-label">
+            <input type="radio" name="visit" value="希望しない" /> 希望しない
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label form-label--light" for="consultation">
+          相談したいこと
+          <span class="form-optional">任意</span>
+        </label>
+        <textarea
+          class="form-textarea"
+          id="consultation"
+          name="consultation"
+          placeholder="お子さんの状況や、特に気になっていることなどを自由にお書きください。"
+          style="min-height:110px;"></textarea>
+      </div>
+
+      <div class="form-submit-wrap">
+        <button type="submit" class="btn--submit">問い合わせを送信する</button>
+      </div>
+
+    </form>
+
+    <!-- 補助導線 -->
+    <div class="contact-sub">
+      <div class="contact-sub__card">
+        <p class="contact-sub__label">お電話でのご相談</p>
+        <p class="contact-sub__tel"><a href="tel:09055774272">090-5577-4272</a></p>
+        <p class="contact-sub__name">（担当：鯉沼）</p>
+      </div>
+      <div class="contact-sub__btns">
+        <a href="tel:09055774272" class="btn btn--tel">📞 電話で問い合わせる</a>
+        <a href="https://note.com/alive_gerbil9037/n/n7593c25e3b86"
+           target="_blank" rel="noopener"
+           class="btn btn--note">noteを見る</a>
+      </div>
+    </div>
+
+    <div class="operator-box">
+      <strong>運営</strong><br>
+      NPO法人おいとま
+      <span class="preparing">申請準備中</span>
+      <br><br>
+      〒306-0126　茨城県古河市久能 925-1
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <strong>おかげさまで農園ゆーず</strong>
+  茨城県古河市久能 925-1<br>
+  Tel：<a href="tel:09055774272">090-5577-4272</a>　／　運営：NPO法人おいとま（申請準備中）<br>
+  <br>
+  © おかげさまで農園ゆーず
+</footer>
+
+<!-- トップへ -->
+<a href="#" class="totop" aria-label="ページトップへ">↑</a>
+
+<script>
+  (function () {
+    var form    = document.getElementById('contactForm');
+    var success = document.getElementById('formSuccess');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      /* ── バリデーション ── */
+      var required = form.querySelectorAll('[required]');
+      var valid = true;
+      required.forEach(function (el) {
+        el.style.borderColor = '';
+        if (!el.value.trim()) {
+          el.style.borderColor = '#c0705a';
+          valid = false;
+        }
+      });
+      if (!valid) {
+        e.preventDefault();
+        var first = form.querySelector('[required][style*="c0705a"]');
+        if (first) first.focus();
+        return;
+      }
+
+      /*
+        送信先が未設定（action=""）の場合は、デフォルト送信を止めて
+        完了メッセージのみ表示します。
+        Formspree / Netlify Forms などを設定した後は、この preventDefault を
+        削除するか、fetch で非同期送信する処理に置き換えてください。
+      */
+      if (!form.action || form.action === window.location.href) {
+        e.preventDefault();
+        form.style.display   = 'none';
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      /* action が設定されている場合はそのまま送信されます */
+    });
+  })();
+</script>
+
+</body>
+</html>
